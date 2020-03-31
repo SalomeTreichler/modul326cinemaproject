@@ -5,7 +5,6 @@ import ch.tbz.cinema.config.generic.ExtendedEntity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.sql.Time;
 
 @Entity
 @Table(name="costumer")
