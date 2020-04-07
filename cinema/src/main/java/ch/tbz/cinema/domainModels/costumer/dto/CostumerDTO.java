@@ -1,22 +1,13 @@
-package ch.tbz.cinema.domainModels.costumer;
+package ch.tbz.cinema.domainModels.costumer.dto;
 
-import ch.tbz.cinema.config.generic.ExtendedEntity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="costumer")
-public class Costumer extends ExtendedEntity {
-    @Column(name = "name", nullable=false)
+public class CostumerDTO {
+    private String id;
     private String name;
-
-    @Column(name = "first_name", nullable=false)
     private String firstName;
-
-    @Column(name = "phone_number", nullable=false)
     private String phoneNumber;
+
+    public CostumerDTO() {
+    }
 
     public String getName() {
         return name;
@@ -40,5 +31,9 @@ public class Costumer extends ExtendedEntity {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getId() {
+        return id;
     }
 }
