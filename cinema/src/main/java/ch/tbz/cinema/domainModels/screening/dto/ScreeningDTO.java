@@ -2,6 +2,7 @@ package ch.tbz.cinema.domainModels.screening.dto;
 
 import ch.tbz.cinema.domainModels.movie.Movie;
 import ch.tbz.cinema.domainModels.theatre.Theatre;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
@@ -9,6 +10,7 @@ public class ScreeningDTO {
     private String id;
     private Movie movie;
     private Theatre theatre;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateAndTime;
 
     public ScreeningDTO() {
