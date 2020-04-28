@@ -12,7 +12,5 @@ public interface BookingService {
 
   Booking insertBooking (Booking newBooking);
 
-  Booking updateBooking (String id, Booking newBooking);
-
   String deleteBookingById (String id);
 }

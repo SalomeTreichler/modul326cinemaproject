@@ -29,11 +29,7 @@ public class BookingServiceImpl implements BookingService {
 
   @Override
   public Booking insertBooking(Booking newBooking) {
-    return bookingRepository.save(newBooking);
-  }
-
-  @Override
-  public Booking updateBooking(String id, Booking newBooking) {
+    newBooking.getSeats().forEach(seat -> seat.setBooked(true));
     return bookingRepository.save(newBooking);
   }
 

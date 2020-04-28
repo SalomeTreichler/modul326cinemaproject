@@ -44,12 +44,6 @@ public class BookingController {
     return new ResponseEntity<>(bookingMapper.toDTO(bookingService.insertBooking(bookingMapper.fromDTO(bookingDTO))), HttpStatus.CREATED);
   }
 
-  @PutMapping("/{id}")
-  public @ResponseBody
-  ResponseEntity<BookingDTO> updateBooking(@PathVariable String id, @RequestBody BookingDTO bookingDTO) {
-    return new ResponseEntity<BookingDTO>(bookingMapper.toDTO(bookingService.updateBooking(id, bookingMapper.fromDTO(bookingDTO))), HttpStatus.OK);
-  }
-
   @DeleteMapping("/{id}")
   public @ResponseBody
   ResponseEntity<String> deleteBooking(@PathVariable String id) {
