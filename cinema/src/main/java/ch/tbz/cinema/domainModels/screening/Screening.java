@@ -3,6 +3,7 @@ package ch.tbz.cinema.domainModels.screening;
 import ch.tbz.cinema.config.generic.ExtendedEntity;
 import ch.tbz.cinema.domainModels.movie.Movie;
 import ch.tbz.cinema.domainModels.theatre.Theatre;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class Screening extends ExtendedEntity {
     private Theatre theatre;
 
     @Column(name="date_and_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateAndTime;
 
     public Movie getMovie() {
