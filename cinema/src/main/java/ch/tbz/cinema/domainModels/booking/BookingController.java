@@ -2,9 +2,6 @@ package ch.tbz.cinema.domainModels.booking;
 
 import ch.tbz.cinema.domainModels.booking.dto.BookingDTO;
 import ch.tbz.cinema.domainModels.booking.dto.BookingMapper;
-import ch.tbz.cinema.domainModels.movie.MovieService;
-import ch.tbz.cinema.domainModels.movie.dto.MovieDTO;
-import ch.tbz.cinema.domainModels.movie.dto.MovieMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
