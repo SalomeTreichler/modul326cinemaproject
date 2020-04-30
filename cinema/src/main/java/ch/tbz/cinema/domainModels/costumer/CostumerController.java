@@ -32,14 +32,14 @@ public class CostumerController {
     // localhost:8080/costumers/desc  GET
     @GetMapping("/desc")
     public @ResponseBody
-    ResponseEntity<List<CostumerDTO>> getProductsSortByDesc() {
+    ResponseEntity<List<CostumerDTO>> getCustomersSortByDesc() {
         return new ResponseEntity<>(costumerMapper.toDTOs(costumerService.sortListByNameDesc()), HttpStatus.OK);
     }
 
     // localhost:8080/costumers/asc  GET
     @GetMapping("/asc")
     public @ResponseBody
-    ResponseEntity<List<CostumerDTO>> getProductsSortByAsc() {
+    ResponseEntity<List<CostumerDTO>> getCustomersSortByAsc() {
         return new ResponseEntity<>(costumerMapper.toDTOs(costumerService.sortListByNameAsc()), HttpStatus.OK);
     }
 
